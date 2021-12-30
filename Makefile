@@ -56,6 +56,9 @@ $(PROJ).config : $(PROJ).json
 
 
 $(PROJ).json : $(FILES)
+# Success with read_verilog command 
+#	yosys -m  ghdl -p "ghdl  --std=08 $(VHDL_FILES) -e $(TOP) ; read_verilog $(VERILOG_FILES); synth_ecp5 -abc9  -top $(TOP) -json $(PROJ).json" 
+# Error without read_verilog command
 	yosys -m  ghdl -p "ghdl  --std=08 $(VHDL_FILES) -e $(TOP) ; synth_ecp5 -abc9  -top $(TOP) -json $(PROJ).json" $(VERILOG_FILES)
 #	yosys -p " synth_ecp5 -abc9 -top $(TOP) -json $(PROJ).json" $(VERILOG_FILES)
 #$(FILES)

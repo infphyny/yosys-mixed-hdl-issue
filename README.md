@@ -1,3 +1,5 @@
+Update: With the use of yosys read_verilog command, now the bitstream can be generated.
+
 # yosys issue : Project with mixed Verilog and VHDL generate wrong cell  
 
 This repro try to show that yosys generate wrong cell for mixed vhdl and verilog project. The last version of yosys that this project can generate a bitstream is  [cdb57118758f855518ad416d12728d72bff58c10](https://github.com/YosysHQ/yosys/commit/cdb57118758f855518ad416d12728d72bff58c10)
